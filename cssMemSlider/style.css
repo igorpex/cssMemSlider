@@ -1,14 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     width: 100%;
-    max-width: 900px;
+    height: fit-content;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .slider {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 56rem;
+    height: fit-content;
+    /* height: 60vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: black;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+}
+
+.slider__box {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__slides {
+    width: 100%;
+    max-width: 56rem;
+    position: relative;
+    /* overflow: hidden; */
+    height: 50vw;
+    /* height: fit-content; */
+    /* padding-left: 2.5vw; */
+    /* padding-right: 2.5vw; */
+    /* display: flex; */
+}
+
+.slider__slide {
+    position: absolute;
+    /* position: relative; */
+    width: 100%;
+    max-width: 56rem;
+    /* opacity: 0; */
+    visibility: hidden;
+    display: inline-block;
+    height: 45vw;
+    /* border-radius: 1rem; */
+    transform: scale(1.3);
+    /* transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s; */
+    /* transition: transform ease-in-out 0.5s, visibility ease-in-out 0.5s; */
+    /* transition: transform ease-in-out 0.5s, display ease-in-out 0.5s; */
+    z-index: 0;
+}
+
+.slider__slide-img {
+    width: 100%;
+    height: 100%;
+    /* max-width: 100%; */
+    max-width: 56rem;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: calc(5%);
+}
+
+.slider__slide-text {
+    color: white;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+input {
+    appearance: none;
+    /* visibility: hidden; */
+}
+
+.slider__labels {
+    display: flex;
+    width: 8rem;
+    height: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-left: auto;
+    margin-right: 10%;
+    z-index: 5;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.slider__dot {
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 1rem;
+    width: 1rem;
+    margin: 0;
+    border-radius: 50%;
+    transition: background ease-in-out 0.5s;
+    border: 0.1rem solid blue;
+    background: blue;
+}
+
+.slider__dot>span {
+    width: 220%;
+    height: 220%;
+    margin-left: -55%;
+    margin-top: -55%;
+    display: inline-block;
+}
+
+
+.slider__dot:hover {
+    border: 0.1rem solid #ddd;
+    height: 1.5rem;
+    width: 1.5rem;
+    transition: ease-in-out 0.5s;
+}
+
+.slider__dot:active {
+    background: green;
+    transition: ease-in-out 0s;
+}
+
+#slide1:checked~.slider__labels label:nth-of-type(1),
+#slide2:checked~.slider__labels label:nth-of-type(2),
+#slide3:checked~.slider__labels label:nth-of-type(3),
+#slide4:checked~.slider__labels label:nth-of-type(4) {
+    background: black;
+}
+
+/* #slide1:checked~.slider__box .slider__slides .slider__slide.slide1,
+#slide2:checked~.slider__box .slider__slides .slider__slide.slide2,
+#slide3:checked~.slider__box .slider__slides .slider__slide.slide3,
+#slide4:checked~.slider__box .slider__slides .slider__slide.slide4 {
+    visibility: visible;
+    z-index: 1;
+    transform: scale(1);
+    transition: transform ease-in-out 0.5s, visibility ease-in-out 0.5s;
+} */
+
+#slide1:checked~.slider__box .slider__slides .slider__slide.slide1,
+#slide2:checked~.slider__box .slider__slides .slider__slide.slide2,
+#slide3:checked~.slider__box .slider__slides .slider__slide.slide3,
+#slide4:checked~.slider__box .slider__slides .slider__slide.slide4 {
+    /* opacity: 1; */
+    visibility: visible;
+    /* display: block; */
+    z-index: 1;
+    /* transition: transform ease-in-out 0.5s, display ease-in-out 0.5s; */
+    transform: scale(1);
+    transition: transform ease-in-out 0.5s, visibility ease-in-out 0.5s;
+
 }

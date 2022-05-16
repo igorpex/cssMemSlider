@@ -7,40 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cssMemSlider</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
 </head>
-<div class="container">
-    <div class="slider">
-        <div class="slider__box">
-            <div class="slider__slides">
-                <div class="slider__slide slide1">
-                    <p class="slider__slide-text">Mega mem 1</p>
-                </div>
-                <div class="slider__slide slide2">
-                    <p class="slider__slide-text">Mega mem 2</p>
-                </div>
-                <div class="slider__slide slide3">
-                    <p class="slider__slide-text">Mega mem 3</p>
-                </div>
-                <div class="slider__slide slide4">
-                    <p class="slider__slide-text">Mega mem 4</p>
-                </div>
-            </div>
+
+<body>
+    <div class="container">
+        <div class="slider">
             <input type="radio" name="slide" id="slide1" checked>
             <input type="radio" name="slide" id="slide2">
             <input type="radio" name="slide" id="slide3">
             <input type="radio" name="slide" id="slide4">
+            <div class="slider__box">
+                <div class="slider__slides">
+                    <div class="slider__slide slide1">
+                        <img class="slider__slide-img" src="./assets/img/01.jpg" alt="mem1">
+                        <p class="slider__slide-text">Mega mem 1</p>
+                    </div>
+                    <div class="slider__slide slide2">
+                        <img class="slider__slide-img" src="./assets/img/02.jpg" alt="mem2">
+                        <p class="slider__slide-text">Mega mem 2</p>
+                    </div>
+                    <div class="slider__slide slide3">
+                        <img class="slider__slide-img" src="./assets/img/03.jpg" alt="mem3">
+                        <p class="slider__slide-text">Mega mem 3</p>
+                    </div>
+                    <div class="slider__slide slide4">
+                        <img class="slider__slide-img" src="./assets/img/04.jpg" alt="mem4">
+                        <p class="slider__slide-text">Mega mem 4</p>
+                    </div>
+                    <div class="slider__slide slide1"></div>
+                </div>
+            </div>
+
             <div class="slider__labels">
-                <label for="slide1" class="slider__dot"></label>
-                <label for="slide2" class="slider__dot"></label>
-                <label for="slide3" class="slider__dot"></label>
-                <label for="slide4" class="slider__dot"></label>
+                <label for="slide1" class="slider__dot"><span></span></label>
+                <label for="slide2" class="slider__dot"><span></span></label>
+                <label for="slide3" class="slider__dot"><span></span></label>
+                <label for="slide4" class="slider__dot"><span></span></label>
             </div>
         </div>
     </div>
-</div>
-
-<body>
-
 </body>
 
 </html>
